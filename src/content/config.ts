@@ -27,24 +27,25 @@ const coursesCollection = defineCollection({
     
     // Pricing
     pricing: z.object({
-      general: z.object({
+      earlyBirdAfterLabel: z.string().optional(),
+      tiers: z.array(z.object({
+        id: z.string(),
+        name: z.string(),
         originalPrice: z.string(),
         earlyBirdPrice: z.string(),
         regularPrice: z.string(),
         time: z.string(),
-      }),
-      vip: z.object({
-        originalPrice: z.string(),
-        earlyBirdPrice: z.string(),
-        regularPrice: z.string(),
-        time: z.string(),
-      }),
-      oneOnOne: z.object({
-        originalPrice: z.string(),
-        earlyBirdPrice: z.string(),
-        regularPrice: z.string(),
-        time: z.string(),
-      }),
+        startUtc: z.string().optional(),
+        endUtc: z.string().optional(),
+        timeSuffix: z.string().optional(),
+        featured: z.boolean().optional(),
+        features: z.array(z.object({
+          text: z.string(),
+          included: z.boolean(),
+        })),
+        buttonText: z.string(),
+        paymentUrl: z.string().url(),
+      })),
     }),
     
     // What You'll Master
@@ -56,9 +57,16 @@ const coursesCollection = defineCollection({
     
     // Two Day Agenda
     agenda: z.object({
+      summary: z.object({
+        startUtc: z.string(),
+        endUtc: z.string(),
+        labelSuffix: z.string().optional(),
+      }).optional(),
       dayOne: z.object({
         date: z.string(),
         time: z.string(),
+        startUtc: z.string().optional(),
+        endUtc: z.string().optional(),
         topics: z.array(z.object({
           title: z.string(),
           description: z.string(),
@@ -68,6 +76,8 @@ const coursesCollection = defineCollection({
       dayTwo: z.object({
         date: z.string(),
         time: z.string(),
+        startUtc: z.string().optional(),
+        endUtc: z.string().optional(),
         topics: z.array(z.object({
           title: z.string(),
           description: z.string(),

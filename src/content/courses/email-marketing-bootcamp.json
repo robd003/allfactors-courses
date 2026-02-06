@@ -16,24 +16,103 @@
     "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
   },
   "pricing": {
-    "general": {
-      "originalPrice": "$799",
-      "earlyBirdPrice": "$199",
-      "regularPrice": "$399",
-      "time": "2pm-3pm PST (daily)"
-    },
-    "vip": {
-      "originalPrice": "$1999",
-      "earlyBirdPrice": "$399",
-      "regularPrice": "$599",
-      "time": "2pm-4pm PST (daily)"
-    },
-    "oneOnOne": {
-      "originalPrice": "$7999",
-      "earlyBirdPrice": "$1299",
-      "regularPrice": "$3999",
-      "time": "2pm-4pm PST (daily) + 1:1 call"
-    }
+    "earlyBirdAfterLabel": "after 3/5",
+    "tiers": [
+      {
+        "id": "general",
+        "name": "General",
+        "originalPrice": "$799",
+        "earlyBirdPrice": "$199",
+        "regularPrice": "$399",
+        "time": "2pm-3pm PST (daily)",
+        "startUtc": "2026-03-15T22:00:00Z",
+        "endUtc": "2026-03-15T23:00:00Z",
+        "timeSuffix": "(daily)",
+        "features": [
+          {
+            "text": "Training: 2 Days of LIVE Email Marketing Training on Zoom ($799 value)",
+            "included": true
+          },
+          {
+            "text": "Replay: Access to the video recording + Templates & Resources",
+            "included": true
+          },
+          {
+            "text": "Direct Access to the Instructor (VIP Room): Live coaching and personalized Q&A ($2,499 value)",
+            "included": false
+          },
+          {
+            "text": "1:1 Call With the Instructor: Personalized strategy call to troubleshoot and optimize your email flows ($7,999 value)",
+            "included": false
+          }
+        ],
+        "buttonText": "Get Your Ticket",
+        "paymentUrl": "https://app.allfactors.com/course/checkout/email-marketing-bootcamp/general/"
+      },
+      {
+        "id": "vip",
+        "name": "VIP",
+        "originalPrice": "$1999",
+        "earlyBirdPrice": "$399",
+        "regularPrice": "$599",
+        "time": "2pm-4pm PST (daily)",
+        "startUtc": "2026-03-15T22:00:00Z",
+        "endUtc": "2026-03-16T00:00:00Z",
+        "timeSuffix": "(daily)",
+        "featured": true,
+        "features": [
+          {
+            "text": "Training: 2 Days of LIVE Email Marketing Training on Zoom ($799 value)",
+            "included": true
+          },
+          {
+            "text": "Replay: Access to the video recording + Templates & Resources",
+            "included": true
+          },
+          {
+            "text": "Direct Access to the Instructor (VIP Room): Live coaching and personalized Q&A ($2,499 value)",
+            "included": true
+          },
+          {
+            "text": "1:1 Call With the Instructor: Personalized strategy call to troubleshoot and optimize your email flows ($7,999 value)",
+            "included": false
+          }
+        ],
+        "buttonText": "Get Your VIP Ticket",
+        "paymentUrl": "https://app.allfactors.com/course/checkout/email-marketing-bootcamp/vip/"
+      },
+      {
+        "id": "one-on-one",
+        "name": "1:1",
+        "originalPrice": "$7999",
+        "earlyBirdPrice": "$1299",
+        "regularPrice": "$3999",
+        "time": "2pm-4pm PST (daily) + 1:1 call",
+        "startUtc": "2026-03-15T22:00:00Z",
+        "endUtc": "2026-03-16T00:00:00Z",
+        "timeSuffix": "(daily) + 1:1 call",
+        "features": [
+          {
+            "text": "Training: 2 Days of LIVE Email Marketing Training on Zoom ($799 value)",
+            "included": true
+          },
+          {
+            "text": "Replay: Access to the video recording + Templates & Resources",
+            "included": true
+          },
+          {
+            "text": "Direct Access to the Instructor (VIP Room): Live coaching and personalized Q&A ($2,499 value)",
+            "included": true
+          },
+          {
+            "text": "1:1 Call With the Instructor: Personalized strategy call to troubleshoot and optimize your email flows ($7,999 value)",
+            "included": true
+          }
+        ],
+        "buttonText": "Get Your 1:1 Ticket",
+        "paymentUrl": "https://app.allfactors.com/course/checkout/email-marketing-bootcamp/one-on-one/"
+      }
+    ]
   },
   "masterTopics": [
     {
@@ -68,9 +147,15 @@
     }
   ],
   "agenda": {
+    "summary": {
+      "startUtc": "2026-03-15T22:00:00Z",
+      "endUtc": "2026-03-16T00:00:00Z"
+    },
     "dayOne": {
       "date": "Saturday, Mar 15",
       "time": "2PM - 3PM PST",
+      "startUtc": "2026-03-15T22:00:00Z",
+      "endUtc": "2026-03-15T23:00:00Z",
       "topics": [
         {
           "title": "Email Marketing Fundamentals",
@@ -94,6 +179,8 @@
     "dayTwo": {
       "date": "Sunday, Mar 16",
       "time": "2PM - 3PM PST",
+      "startUtc": "2026-03-16T22:00:00Z",
+      "endUtc": "2026-03-16T23:00:00Z",
       "topics": [
         {
           "title": "Automation & Sequences",

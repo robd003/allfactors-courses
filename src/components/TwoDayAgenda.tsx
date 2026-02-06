@@ -1,6 +1,34 @@
 import { Monitor, Video, MessageCircle, BookOpen, Calendar, Check } from 'lucide-react';
+import { LocalizedTimeRange } from './LocalizedTimeRange';
 
-export function TwoDayAgenda() {
+interface AgendaDay {
+  date: string;
+  time: string;
+  startUtc?: string;
+  endUtc?: string;
+  topics: {
+    title: string;
+    description: string;
+    time?: string;
+  }[];
+}
+
+interface TwoDayAgendaProps {
+  eventDates: {
+    displayDates: string;
+  };
+  agenda: {
+    summary?: {
+      startUtc: string;
+      endUtc: string;
+      labelSuffix?: string;
+    };
+    dayOne: AgendaDay;
+    dayTwo: AgendaDay;
+  };
+}
+
+export function TwoDayAgenda({ agenda, eventDates }: TwoDayAgendaProps) {
   const features = [
     {
       icon: Monitor,
@@ -24,20 +52,6 @@ export function TwoDayAgenda() {
     }
   ];
 
-  const dayOneTopics = [
-    { title: 'Ad Platforms Best Practices', description: 'Understand the best practices and pitfalls of each platform' },
-    { title: 'Audience Targeting', description: 'See how to setup audience targeting the right way' },
-    { title: 'High-Converting Ad Creative', description: 'Learn the proven copywriting formulas and hooks' },
-    { title: 'Q&A (VIP Only)', description: 'Get your specific questions answered', time: '4PM - 5PM PST' }
-  ];
-
-  const dayTwoTopics = [
-    { title: 'Analytics & Tracking', description: 'Understand how to set up tracking & analyze results' },
-    { title: 'Optimization & Testing', description: 'Learn how to use data to improve performance' },
-    { title: 'Scaling Strategies', description: 'Learn how to identify winning ads and scale them, while cutting the underperformers' },
-    { title: 'Q&A (VIP Only)', description: 'Get your specific questions answered', time: '4PM - 5PM PST' }
-  ];
-
   return (
     <section className="py-24 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,16 +61,25 @@ export function TwoDayAgenda() {
         </h2>
         
         <div className="text-center mb-4">
-          <p className="text-gray-700 text-lg font-medium">
-            Thursday, 2/26 - Friday, 2/27, 2026
-          </p>
-        </div>
-        
-        <div className="text-center mb-16">
-          <p className="text-gray-600 text-lg">
-            3PM - 5PM PST
-          </p>
-        </div>
+            <p className="text-gray-700 text-lg font-medium">
+              {eventDates.displayDates}
+            </p>
+          </div>
+          
+          <div className="text-center mb-16">
+            <p className="text-gray-600 text-lg">
+              {agenda.summary ? (
+                <LocalizedTimeRange
+                  startUtc={agenda.summary.startUtc}
+                  endUtc={agenda.summary.endUtc}
+                  suffix={agenda.summary.labelSuffix}
+                  fallback={agenda.dayOne.time}
+                />
+              ) : (
+                agenda.dayOne.time
+              )}
+            </p>
+          </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -85,12 +108,23 @@ export function TwoDayAgenda() {
               <Calendar className="w-6 h-6" style={{ color: '#434CE7' }} strokeWidth={2} />
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">Day 1</h3>
-                <p className="text-gray-600">Thursday, Feb 26 • 3PM - 4PM PST</p>
+                <p className="text-gray-600">
+                  {agenda.dayOne.date} •{' '}
+                  {agenda.dayOne.startUtc && agenda.dayOne.endUtc ? (
+                    <LocalizedTimeRange
+                      startUtc={agenda.dayOne.startUtc}
+                      endUtc={agenda.dayOne.endUtc}
+                      fallback={agenda.dayOne.time}
+                    />
+                  ) : (
+                    agenda.dayOne.time
+                  )}
+                </p>
               </div>
             </div>
             
             <div className="space-y-4">
-              {dayOneTopics.map((topic, index) => (
+              {agenda.dayOne.topics.map((topic, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>
@@ -114,12 +148,23 @@ export function TwoDayAgenda() {
               <Calendar className="w-6 h-6" style={{ color: '#434CE7' }} strokeWidth={2} />
               <div>
                 <h3 className="text-2xl font-bold text-gray-900">Day 2</h3>
-                <p className="text-gray-600">Friday, Feb 27 • 3PM - 4PM PST</p>
+                <p className="text-gray-600">
+                  {agenda.dayTwo.date} •{' '}
+                  {agenda.dayTwo.startUtc && agenda.dayTwo.endUtc ? (
+                    <LocalizedTimeRange
+                      startUtc={agenda.dayTwo.startUtc}
+                      endUtc={agenda.dayTwo.endUtc}
+                      fallback={agenda.dayTwo.time}
+                    />
+                  ) : (
+                    agenda.dayTwo.time
+                  )}
+                </p>
               </div>
             </div>
             
             <div className="space-y-4">
-              {dayTwoTopics.map((topic, index) => (
+              {agenda.dayTwo.topics.map((topic, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <Check className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" strokeWidth={2.5} />
                   <div>

@@ -32,10 +32,10 @@ const { data } = defaultCourse;
     <SoundsFamiliar />
     <WhatYouMaster />
     <WhoThisIsFor />
-    <TwoDayAgenda />
+    <TwoDayAgenda agenda={data.agenda} eventDates={data.eventDates} client:load />
     <Instructor />
     <Skills />
-    <Pricing client:load />
+    <Pricing pricing={data.pricing} eventDates={data.eventDates} client:load />
     <WhatsIncluded />
     <FAQ client:load />
     <Footer />

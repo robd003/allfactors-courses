@@ -16,24 +16,103 @@
     "videoUrl": "https://www.youtube.com/embed/5i7sAlCOjUk"
   },
   "pricing": {
-    "general": {
-      "originalPrice": "$999",
-      "earlyBirdPrice": "$299",
-      "regularPrice": "$599",
-      "time": "3pm-4pm PST (daily)"
-    },
-    "vip": {
-      "originalPrice": "$2999",
-      "earlyBirdPrice": "$499",
-      "regularPrice": "$799",
-      "time": "3pm-5pm PST (daily)"
-    },
-    "oneOnOne": {
-      "originalPrice": "$9999",
-      "earlyBirdPrice": "$1699",
-      "regularPrice": "$4999",
-      "time": "3pm-5pm PST (daily) + 1:1 call"
-    }
+    "earlyBirdAfterLabel": "after 2/15",
+    "tiers": [
+      {
+        "id": "general",
+        "name": "General",
+        "originalPrice": "$999",
+        "earlyBirdPrice": "$299",
+        "regularPrice": "$599",
+        "time": "3pm-4pm PST (daily)",
+        "startUtc": "2026-02-26T23:00:00Z",
+        "endUtc": "2026-02-27T00:00:00Z",
+        "timeSuffix": "(daily)",
+        "features": [
+          {
+            "text": "Training: 2 Days of LIVE Paid Ads Training on Zoom ($999 value)",
+            "included": true
+          },
+          {
+            "text": "Replay: Access to the video recording + Resources & Community",
+            "included": true
+          },
+          {
+            "text": "Direct Access to Helena (in the VIP Room): Be in the room LIVE as Helena coaches entrepreneurs on their ad strategies. You'll watch and learn from questions, ask your own questions. Take notes and apply instantly to your own business ($2,999 value)",
+            "included": false
+          },
+          {
+            "text": "1:1 Call With Helena to Troubleshoot your Ads: Personalized call to resolve your ads problems or help you setup ads from scratch to avoid mistakes and maximize profit ($9,999 value)",
+            "included": false
+          }
+        ],
+        "buttonText": "Get Your Ticket",
+        "paymentUrl": "https://app.allfactors.com/course/checkout/paid-ads-masterclass/general/"
+      },
+      {
+        "id": "vip",
+        "name": "VIP",
+        "originalPrice": "$2999",
+        "earlyBirdPrice": "$499",
+        "regularPrice": "$799",
+        "time": "3pm-5pm PST (daily)",
+        "startUtc": "2026-02-26T23:00:00Z",
+        "endUtc": "2026-02-27T01:00:00Z",
+        "timeSuffix": "(daily)",
+        "featured": true,
+        "features": [
+          {
+            "text": "Training: 2 Days of LIVE Paid Ads Training on Zoom ($999 value)",
+            "included": true
+          },
+          {
+            "text": "Replay: Access to the video recording + Resources & Community",
+            "included": true
+          },
+          {
+            "text": "Direct Access to Helena (in the VIP Room): Be in the room LIVE as Helena coaches entrepreneurs on their ad strategies. You'll watch and learn from questions, ask your own questions. Take notes and apply instantly to your own business ($2,999 value)",
+            "included": true
+          },
+          {
+            "text": "1:1 Call With Helena to Troubleshoot your Ads: Personalized call to resolve your ads problems or help you setup ads from scratch to avoid mistakes and maximize profit ($9,999 value)",
+            "included": false
+          }
+        ],
+        "buttonText": "Get Your VIP Ticket",
+        "paymentUrl": "https://app.allfactors.com/course/checkout/paid-ads-masterclass/vip/"
+      },
+      {
+        "id": "one-on-one",
+        "name": "1:1",
+        "originalPrice": "$9999",
+        "earlyBirdPrice": "$1699",
+        "regularPrice": "$4999",
+        "time": "3pm-5pm PST (daily) + 1:1 call",
+        "startUtc": "2026-02-26T23:00:00Z",
+        "endUtc": "2026-02-27T01:00:00Z",
+        "timeSuffix": "(daily) + 1:1 call",
+        "features": [
+          {
+            "text": "Training: 2 Days of LIVE Paid Ads Training on Zoom ($999 value)",
+            "included": true
+          },
+          {
+            "text": "Replay: Access to the video recording + Resources & Community",
+            "included": true
+          },
+          {
+            "text": "Direct Access to Helena (in the VIP Room): Be in the room LIVE as Helena coaches entrepreneurs on their ad strategies. You'll watch and learn from questions, and take notes you can apply instantly to your own business ($2,999 value)",
+            "included": true
+          },
+          {
+            "text": "1:1 Call With Helena to Troubleshoot your Ads: Personalized call to resolve your ads problems or help you setup ads from scratch to avoid mistakes and maximize profit ($9,999 value)",
+            "included": true
+          }
+        ],
+        "buttonText": "Get Your 1:1 Ticket",
+        "paymentUrl": "https://app.allfactors.com/course/checkout/paid-ads-masterclass/one-on-one/"
+      }
+    ]
   },
   "masterTopics": [
     {
@@ -68,9 +147,15 @@
     }
   ],
   "agenda": {
+    "summary": {
+      "startUtc": "2026-02-26T23:00:00Z",
+      "endUtc": "2026-02-27T01:00:00Z"
+    },
     "dayOne": {
       "date": "Thursday, Feb 26",
       "time": "3PM - 4PM PST",
+      "startUtc": "2026-02-26T23:00:00Z",
+      "endUtc": "2026-02-27T00:00:00Z",
       "topics": [
         {
           "title": "Ad Platforms Best Practices",
@@ -94,6 +179,8 @@
     "dayTwo": {
       "date": "Friday, Feb 27",
       "time": "3PM - 4PM PST",
+      "startUtc": "2026-02-27T23:00:00Z",
+      "endUtc": "2026-02-28T00:00:00Z",
       "topics": [
         {
           "title": "Analytics & Tracking",

@@ -1,92 +1,39 @@
 import { Check } from 'lucide-react';
+import { LocalizedTimeRange } from './LocalizedTimeRange';
 
-export function Pricing() {
-  // Determine if early bird pricing is active (before Feb 16, 2026)
+interface PricingTier {
+  id: string;
+  name: string;
+  originalPrice: string;
+  earlyBirdPrice: string;
+  regularPrice: string;
+  time: string;
+  startUtc?: string;
+  endUtc?: string;
+  timeSuffix?: string;
+  featured?: boolean;
+  features: {
+    text: string;
+    included: boolean;
+  }[];
+  buttonText: string;
+  paymentUrl: string;
+}
+
+interface PricingProps {
+  pricing: {
+    earlyBirdAfterLabel?: string;
+    tiers: PricingTier[];
+  };
+  eventDates: {
+    earlyBirdDeadline: string;
+  };
+}
+
+export function Pricing({ pricing, eventDates }: PricingProps) {
   const now = new Date();
-  const earlyBirdDeadline = new Date('2026-02-16T00:00:00');
+  const earlyBirdDeadline = new Date(eventDates.earlyBirdDeadline);
   const isEarlyBird = now < earlyBirdDeadline;
-
-  const tiers = [
-    {
-      name: 'General',
-      originalPrice: '$999',
-      earlyBirdPrice: '$299',
-      regularPrice: '$599',
-      time: '3pm-4pm PST (daily)',
-      features: [
-        {
-          text: 'Training: 2 Days of LIVE Paid Ads Training on Zoom ($999 value)',
-          included: true
-        },
-        {
-          text: 'Replay: Access to the video recording + Resources & Community',
-          included: true
-        },
-        {
-          text: 'Direct Access to Helena (in the VIP Room): Be in the room LIVE as Helena coaches entrepreneurs on their ad strategies. You\'ll watch and learn from questions, ask your own questions. Take notes and apply instantly to your own business ($2,999 value)',
-          included: false
-        },
-        {
-          text: '1:1 Call With Helena to Troubleshoot your Ads: Personalized call to resolve your ads problems or help you setup ads from scratch to avoid mistakes and maximize profit ($9,999 value)',
-          included: false
-        }
-      ],
-      buttonText: 'Get Your Ticket'
-    },
-    {
-      name: 'VIP',
-      originalPrice: '$2999',
-      earlyBirdPrice: '$499',
-      regularPrice: '$799',
-      time: '3pm-5pm PST (daily)',
-      featured: true,
-      features: [
-        {
-          text: 'Training: 2 Days of LIVE Paid Ads Training on Zoom ($999 value)',
-          included: true
-        },
-        {
-          text: 'Replay: Access to the video recording + Resources & Community',
-          included: true
-        },
-        {
-          text: 'Direct Access to Helena (in the VIP Room): Be in the room LIVE as Helena coaches entrepreneurs on their ad strategies. You\'ll watch and learn from questions, ask your own questions. Take notes and apply instantly to your own business ($2,999 value)',
-          included: true
-        },
-        {
-          text: '1:1 Call With Helena to Troubleshoot your Ads: Personalized call to resolve your ads problems or help you setup ads from scratch to avoid mistakes and maximize profit ($9,999 value)',
-          included: false
-        }
-      ],
-      buttonText: 'Get Your VIP Ticket'
-    },
-    {
-      name: '1:1',
-      originalPrice: '$9999',
-      earlyBirdPrice: '$1699',
-      regularPrice: '$4999',
-      time: '3pm-5pm PST (daily) + 1:1 call',
-      features: [
-        {
-          text: 'Training: 2 Days of LIVE Paid Ads Training on Zoom ($999 value)',
-          included: true
-        },
-        {
-          text: 'Replay: Access to the video recording + Resources & Community',
-          included: true
-        },
-        {
-          text: 'Direct Access to Helena (in the VIP Room): Be in the room LIVE as Helena coaches entrepreneurs on their ad strategies. You\'ll watch and learn from questions, and take notes you can apply instantly to your own business ($2,999 value)',
-          included: true
-        },
-        {
-          text: '1:1 Call With Helena to Troubleshoot your Ads: Personalized call to resolve your ads problems or help you setup ads from scratch to avoid mistakes and maximize profit ($9,999 value)',
-          included: true
-        }
-      ],
-      buttonText: 'Get Your 1:1 Ticket'
-    }
-  ];
 
   return (
     <section className="py-24 bg-white" id="pricing">
@@ -101,7 +48,7 @@ export function Pricing() {
 
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto">
-          {tiers.map((tier, index) => (
+          {pricing.tiers.map((tier, index) => (
             <div
               key={index}
               className={`bg-white rounded-2xl p-6 sm:p-8 flex flex-col transition-all relative ${
@@ -140,13 +87,22 @@ export function Pricing() {
                   </div>
                 </div>
                 <p className="text-gray-800 text-lg sm:text-xl lg:text-2xl font-bold">
-                  {isEarlyBird ? `${tier.regularPrice} after 2/15` : ''}
+                  {isEarlyBird && pricing.earlyBirdAfterLabel ? `${tier.regularPrice} ${pricing.earlyBirdAfterLabel}` : ''}
                 </p>
               </div>
 
               {/* Time */}
               <p className="text-center text-gray-600 text-sm sm:text-base mb-6 pb-6 border-b border-gray-200">
-                {tier.time}
+                {tier.startUtc && tier.endUtc ? (
+                  <LocalizedTimeRange
+                    startUtc={tier.startUtc}
+                    endUtc={tier.endUtc}
+                    suffix={tier.timeSuffix}
+                    fallback={tier.time}
+                  />
+                ) : (
+                  tier.time
+                )}
               </p>
 
               {/* Features */}
@@ -177,9 +133,12 @@ export function Pricing() {
               </div>
 
               {/* CTA Button */}
-              <button className="w-full py-4 bg-[#16A34A] text-white rounded-full hover:bg-[#15803D] transition-colors font-semibold text-lg shadow-lg">
+              <a
+                className="block w-full py-4 bg-[#16A34A] text-white rounded-full hover:bg-[#15803D] transition-colors font-semibold text-lg shadow-lg text-center"
+                href={tier.paymentUrl}
+              >
                 {tier.buttonText}
-              </button>
+              </a>
             </div>
           ))}
         </div>

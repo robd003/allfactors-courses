@@ -1,0 +1,145 @@
+{
+  "title": "Email Marketing Bootcamp",
+  "subtitle": "2-Day Live Masterclass: Master Email Marketing & Automation",
+  "slug": "email-marketing-bootcamp",
+  "eventDates": {
+    "startDate": "2026-03-15",
+    "endDate": "2026-03-16",
+    "displayDates": "Saturday 3/15 - Sunday 3/16, 2026",
+    "earlyBirdDeadline": "2026-03-05T23:59:59"
+  },
+  "hero": {
+    "headline": "Stop Losing Subscribers & Start",
+    "highlightedWord": "Converting",
+    "description": "With Email Marketing",
+    "bannerText": "HURRY! EARLY BIRD TICKETS SALE ENDS MARCH 5TH 💰",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  "pricing": {
+    "general": {
+      "originalPrice": "$799",
+      "earlyBirdPrice": "$199",
+      "regularPrice": "$399",
+      "time": "2pm-3pm PST (daily)"
+    },
+    "vip": {
+      "originalPrice": "$1999",
+      "earlyBirdPrice": "$399",
+      "regularPrice": "$599",
+      "time": "2pm-4pm PST (daily)"
+    },
+    "oneOnOne": {
+      "originalPrice": "$7999",
+      "earlyBirdPrice": "$1299",
+      "regularPrice": "$3999",
+      "time": "2pm-4pm PST (daily) + 1:1 call"
+    }
+  },
+  "masterTopics": [
+    {
+      "title": "List Building Strategies",
+      "description": "Learn proven techniques to grow your email list with engaged subscribers",
+      "icon": "Users"
+    },
+    {
+      "title": "Email Copywriting",
+      "description": "Master the art of writing emails that get opened, read, and clicked",
+      "icon": "Sparkles"
+    },
+    {
+      "title": "Automation Workflows",
+      "description": "Set up automated sequences that nurture leads and drive sales on autopilot",
+      "icon": "Layout"
+    },
+    {
+      "title": "Deliverability Mastery",
+      "description": "Ensure your emails land in the inbox, not the spam folder",
+      "icon": "BarChart"
+    },
+    {
+      "title": "A/B Testing & Optimization",
+      "description": "Learn how to test and improve your email performance systematically",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Advanced Segmentation",
+      "description": "Target the right message to the right person at the right time",
+      "icon": "Rocket"
+    }
+  ],
+  "agenda": {
+    "dayOne": {
+      "date": "Saturday, Mar 15",
+      "time": "2PM - 3PM PST",
+      "topics": [
+        {
+          "title": "Email Marketing Fundamentals",
+          "description": "Build a solid foundation in email marketing best practices"
+        },
+        {
+          "title": "List Building & Lead Magnets",
+          "description": "Create irresistible offers that grow your list"
+        },
+        {
+          "title": "Email Copywriting Formulas",
+          "description": "Write compelling emails that convert"
+        },
+        {
+          "title": "Q&A (VIP Only)",
+          "description": "Get your specific questions answered",
+          "time": "3PM - 4PM PST"
+        }
+      ]
+    },
+    "dayTwo": {
+      "date": "Sunday, Mar 16",
+      "time": "2PM - 3PM PST",
+      "topics": [
+        {
+          "title": "Automation & Sequences",
+          "description": "Set up powerful automation workflows"
+        },
+        {
+          "title": "Segmentation Strategies",
+          "description": "Target subscribers with precision"
+        },
+        {
+          "title": "Testing & Optimization",
+          "description": "Continuously improve your email performance"
+        },
+        {
+          "title": "Q&A (VIP Only)",
+          "description": "Get your specific questions answered",
+          "time": "3PM - 4PM PST"
+        }
+      ]
+    }
+  },
+  "faqs": [
+    {
+      "question": "Do I need any email marketing experience?",
+      "answer": "No previous experience required! This bootcamp is designed for beginners and intermediate users. We start with fundamentals and progress to advanced strategies."
+    },
+    {
+      "question": "Which email platforms will we cover?",
+      "answer": "We'll cover the major platforms including Mailchimp, ConvertKit, ActiveCampaign, and others. The principles apply across all platforms."
+    },
+    {
+      "question": "What if I miss a live session?",
+      "answer": "All sessions are recorded and you'll get lifetime access to the replays. Watch at your own pace and revisit any sections as needed."
+    },
+    {
+      "question": "How long is each session?",
+      "answer": "General ticket holders get 2-3 PM PST each day. VIP ticket holders get an extra hour from 3-4 PM PST for personalized Q&A."
+    }
+  ],
+  "instructor": {
+    "name": "Sarah Johnson",
+    "title": "Email Marketing Expert",
+    "bio": "Sarah has helped hundreds of businesses generate millions in revenue through email marketing."
+  },
+  "seo": {
+    "metaTitle": "Email Marketing Bootcamp - Master Email Marketing & Automation",
+    "metaDescription": "Join our 2-day email marketing bootcamp and learn to build, nurture, and convert your email list into a revenue-generating machine."
+  }
+}

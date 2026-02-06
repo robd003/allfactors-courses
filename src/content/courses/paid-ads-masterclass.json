@@ -1,0 +1,161 @@
+{
+  "title": "Paid Ads Masterclass",
+  "subtitle": "2-Day Live Masterclass: Learn How to Run Profitable Paid Ads",
+  "slug": "paid-ads-masterclass",
+  "eventDates": {
+    "startDate": "2026-02-26",
+    "endDate": "2026-02-27",
+    "displayDates": "Thursday 2/26 - Friday 2/27, 2026",
+    "earlyBirdDeadline": "2026-02-15T23:59:59"
+  },
+  "hero": {
+    "headline": "Stop Burning Cash & Start",
+    "highlightedWord": "Profiting",
+    "description": "With Paid Ads",
+    "bannerText": "HURRY! EARLY BIRD TICKETS SALE ENDS FEB 15TH 💵",
+    "videoUrl": "https://www.youtube.com/embed/5i7sAlCOjUk"
+  },
+  "pricing": {
+    "general": {
+      "originalPrice": "$999",
+      "earlyBirdPrice": "$299",
+      "regularPrice": "$599",
+      "time": "3pm-4pm PST (daily)"
+    },
+    "vip": {
+      "originalPrice": "$2999",
+      "earlyBirdPrice": "$499",
+      "regularPrice": "$799",
+      "time": "3pm-5pm PST (daily)"
+    },
+    "oneOnOne": {
+      "originalPrice": "$9999",
+      "earlyBirdPrice": "$1699",
+      "regularPrice": "$4999",
+      "time": "3pm-5pm PST (daily) + 1:1 call"
+    }
+  },
+  "masterTopics": [
+    {
+      "title": "Campaign Structure & Setup",
+      "description": "Learn the exact framework for structuring campaigns for each ad platform",
+      "icon": "Layout"
+    },
+    {
+      "title": "Audience Targeting Mastery",
+      "description": "Discover how to find and target your ideal customers across all major ad platforms",
+      "icon": "Users"
+    },
+    {
+      "title": "High-Converting Ad Creative",
+      "description": "See how to create ads that grab attention and drive action using proven copywriting formulas",
+      "icon": "Sparkles"
+    },
+    {
+      "title": "Budget Optimization",
+      "description": "Learn how to maximize ROI with smart bidding strategies and budget allocation techniques",
+      "icon": "DollarSign"
+    },
+    {
+      "title": "Analytics & Tracking",
+      "description": "Understand how to set up proper tracking to measure what matters and make data-driven decisions",
+      "icon": "BarChart"
+    },
+    {
+      "title": "Scaling Strategies",
+      "description": "Learn how to identify winning ads, scale them, and cut underperformers before they drain your budget.",
+      "icon": "Rocket"
+    }
+  ],
+  "agenda": {
+    "dayOne": {
+      "date": "Thursday, Feb 26",
+      "time": "3PM - 4PM PST",
+      "topics": [
+        {
+          "title": "Ad Platforms Best Practices",
+          "description": "Understand the best practices and pitfalls of each platform"
+        },
+        {
+          "title": "Audience Targeting",
+          "description": "See how to setup audience targeting the right way"
+        },
+        {
+          "title": "High-Converting Ad Creative",
+          "description": "Learn the proven copywriting formulas and hooks"
+        },
+        {
+          "title": "Q&A (VIP Only)",
+          "description": "Get your specific questions answered",
+          "time": "4PM - 5PM PST"
+        }
+      ]
+    },
+    "dayTwo": {
+      "date": "Friday, Feb 27",
+      "time": "3PM - 4PM PST",
+      "topics": [
+        {
+          "title": "Analytics & Tracking",
+          "description": "Understand how to set up tracking & analyze results"
+        },
+        {
+          "title": "Optimization & Testing",
+          "description": "Learn how to use data to improve performance"
+        },
+        {
+          "title": "Scaling Strategies",
+          "description": "Learn how to identify winning ads and scale them, while cutting the underperformers"
+        },
+        {
+          "title": "Q&A (VIP Only)",
+          "description": "Get your specific questions answered",
+          "time": "4PM - 5PM PST"
+        }
+      ]
+    }
+  },
+  "faqs": [
+    {
+      "question": "Do I need any previous experience with ads?",
+      "answer": "No previous experience is required! This workshop is designed for beginners and intermediate users. We'll start with the fundamentals and build up to advanced strategies, so you can follow along regardless of your current skill level."
+    },
+    {
+      "question": "Which platforms will we focus on?",
+      "answer": "We'll cover the major advertising platforms including Google Ads, Meta Ads (Facebook & Instagram), LinkedIn Ads. You'll learn the unique strategies and best practices for each platform, plus how to choose the right platform for your specific business goals."
+    },
+    {
+      "question": "What if I can't attend the live sessions?",
+      "answer": "No problem! All sessions are recorded and you'll receive full access to the replays within 24 hours of each session. You can watch at your own pace and revisit any sections as many times as you need for a month."
+    },
+    {
+      "question": "How long is each day's training?",
+      "answer": "For General ticket holders, the live training runs from 3–4 PM PST each day. For VIP ticket holders, there is an additional session from 4–5 PM PST focused on personalized Q&A. VIP 1:1 coaching calls are scheduled separately after the workshop."
+    },
+    {
+      "question": "What is the refund policy?",
+      "answer": "Due to the digital nature of the workshop, there are no refunds.\nAll sessions will be recorded, and you'll get access to all resources, templates, and the community, so you can go through everything at your own pace if you can't attend live."
+    },
+    {
+      "question": "How do I get access after purchase?",
+      "answer": "Immediately after purchase you'll receive a confirmation email. A day prior to the workshop, you'll receive the Zoom link for the live sessions. Replay recordings will be sent within 24 hours of each session."
+    },
+    {
+      "question": "What's the difference between VIP and General access?",
+      "answer": "General access includes the 3-4 PM PST 2-day live training, session replays, resources and community. VIP access includes everything in General, plus a separate daily link to the 4–5 PM PST personalized Q&A sessions."
+    },
+    {
+      "question": "What does the 1:1 coaching call include?",
+      "answer": "The 1:1 coaching call (included with the 1:1 tier) is a dedicated 60-minute strategy session where we'll review your specific business, troubleshoot your ads setup, and create a customized action plan for your campaigns. This happens after the workshop on a separate scheduled call."
+    }
+  ],
+  "instructor": {
+    "name": "Helena",
+    "title": "Paid Ads Expert",
+    "bio": "Helena has over 10 years of experience managing multi-million dollar ad campaigns for Fortune 500 companies and startups alike."
+  },
+  "seo": {
+    "metaTitle": "Paid Ads Masterclass - Learn Profitable Facebook & Google Ads",
+    "metaDescription": "Join our 2-day live masterclass and learn how to run profitable paid advertising campaigns. Stop wasting money on ads that don't convert."
+  }
+}

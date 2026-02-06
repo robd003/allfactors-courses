@@ -1,0 +1,49 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { HeroSection } from '../../components/HeroSection';
+import { SoundsFamiliar } from '../../components/SoundsFamiliar';
+import { WhatYouMaster } from '../../components/WhatYouMaster';
+import { WhoThisIsFor } from '../../components/WhoThisIsFor';
+import { TwoDayAgenda } from '../../components/TwoDayAgenda';
+import { Instructor } from '../../components/Instructor';
+import { Skills } from '../../components/Skills';
+import { Pricing } from '../../components/Pricing';
+import { WhatsIncluded } from '../../components/WhatsIncluded';
+import { FAQ } from '../../components/FAQ';
+import { Footer } from '../../components/Footer';
+
+export async function getStaticPaths() {
+  const courses = await getCollection('courses');
+  return courses.map((course) => ({
+    params: { slug: course.data.slug },
+    props: { course },
+  }));
+}
+
+const { course } = Astro.props;
+const { data } = course;
+---
+
+<Layout 
+  title={data.seo?.metaTitle || data.title}
+  description={data.seo?.metaDescription || data.subtitle}
+>
+  <div class="min-h-screen bg-white">
+    <HeroSection 
+      hero={data.hero} 
+      eventDates={data.eventDates}
+      client:load
+    />
+    <SoundsFamiliar />
+    <WhatYouMaster />
+    <WhoThisIsFor />
+    <TwoDayAgenda />
+    <Instructor />
+    <Skills />
+    <Pricing client:load />
+    <WhatsIncluded />
+    <FAQ client:load />
+    <Footer />
+  </div>
+</Layout>

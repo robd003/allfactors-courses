@@ -1,5 +1,4 @@
 import { Check } from 'lucide-react';
-import { LocalizedTimeRange } from './LocalizedTimeRange';
 
 interface PricingTier {
   id: string;
@@ -8,9 +7,6 @@ interface PricingTier {
   earlyBirdPrice: string;
   regularPrice: string;
   time: string;
-  startUtc?: string;
-  endUtc?: string;
-  timeSuffix?: string;
   featured?: boolean;
   features: {
     text: string;
@@ -93,16 +89,7 @@ export function Pricing({ pricing, eventDates }: PricingProps) {
 
               {/* Time */}
               <p className="text-center text-gray-600 text-sm sm:text-base mb-6 pb-6 border-b border-gray-200">
-                {tier.startUtc && tier.endUtc ? (
-                  <LocalizedTimeRange
-                    startUtc={tier.startUtc}
-                    endUtc={tier.endUtc}
-                    suffix={tier.timeSuffix}
-                    fallback={tier.time}
-                  />
-                ) : (
-                  tier.time
-                )}
+                {tier.time}
               </p>
 
               {/* Features */}

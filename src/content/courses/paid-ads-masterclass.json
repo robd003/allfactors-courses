@@ -25,9 +25,6 @@
         "earlyBirdPrice": "$299",
         "regularPrice": "$599",
         "time": "3pm-4pm PST (daily)",
-        "startUtc": "2026-02-26T23:00:00Z",
-        "endUtc": "2026-02-27T00:00:00Z",
-        "timeSuffix": "(daily)",
         "features": [
           {
             "text": "Training: 2 Days of LIVE Paid Ads Training on Zoom ($999 value)",
@@ -56,9 +53,6 @@
         "earlyBirdPrice": "$499",
         "regularPrice": "$799",
         "time": "3pm-5pm PST (daily)",
-        "startUtc": "2026-02-26T23:00:00Z",
-        "endUtc": "2026-02-27T01:00:00Z",
-        "timeSuffix": "(daily)",
         "featured": true,
         "features": [
           {
@@ -88,9 +82,6 @@
         "earlyBirdPrice": "$1699",
         "regularPrice": "$4999",
         "time": "3pm-5pm PST (daily) + 1:1 call",
-        "startUtc": "2026-02-26T23:00:00Z",
-        "endUtc": "2026-02-27T01:00:00Z",
-        "timeSuffix": "(daily) + 1:1 call",
         "features": [
           {
             "text": "Training: 2 Days of LIVE Paid Ads Training on Zoom ($999 value)",
@@ -147,15 +138,9 @@
     }
   ],
   "agenda": {
-    "summary": {
-      "startUtc": "2026-02-26T23:00:00Z",
-      "endUtc": "2026-02-27T01:00:00Z"
-    },
     "dayOne": {
       "date": "Thursday, Feb 26",
       "time": "3PM - 4PM PST",
-      "startUtc": "2026-02-26T23:00:00Z",
-      "endUtc": "2026-02-27T00:00:00Z",
       "topics": [
         {
           "title": "Ad Platforms Best Practices",
@@ -179,8 +164,6 @@
     "dayTwo": {
       "date": "Friday, Feb 27",
       "time": "3PM - 4PM PST",
-      "startUtc": "2026-02-27T23:00:00Z",
-      "endUtc": "2026-02-28T00:00:00Z",
       "topics": [
         {
           "title": "Analytics & Tracking",

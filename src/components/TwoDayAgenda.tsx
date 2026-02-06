@@ -1,11 +1,8 @@
 import { Monitor, Video, MessageCircle, BookOpen, Calendar, Check } from 'lucide-react';
-import { LocalizedTimeRange } from './LocalizedTimeRange';
 
 interface AgendaDay {
   date: string;
   time: string;
-  startUtc?: string;
-  endUtc?: string;
   topics: {
     title: string;
     description: string;
@@ -18,11 +15,6 @@ interface TwoDayAgendaProps {
     displayDates: string;
   };
   agenda: {
-    summary?: {
-      startUtc: string;
-      endUtc: string;
-      labelSuffix?: string;
-    };
     dayOne: AgendaDay;
     dayTwo: AgendaDay;
   };
@@ -68,16 +60,7 @@ export function TwoDayAgenda({ agenda, eventDates }: TwoDayAgendaProps) {
           
           <div className="text-center mb-16">
             <p className="text-gray-600 text-lg">
-              {agenda.summary ? (
-                <LocalizedTimeRange
-                  startUtc={agenda.summary.startUtc}
-                  endUtc={agenda.summary.endUtc}
-                  suffix={agenda.summary.labelSuffix}
-                  fallback={agenda.dayOne.time}
-                />
-              ) : (
-                agenda.dayOne.time
-              )}
+              {agenda.dayOne.time}
             </p>
           </div>
 
@@ -110,15 +93,7 @@ export function TwoDayAgenda({ agenda, eventDates }: TwoDayAgendaProps) {
                 <h3 className="text-2xl font-bold text-gray-900">Day 1</h3>
                 <p className="text-gray-600">
                   {agenda.dayOne.date} •{' '}
-                  {agenda.dayOne.startUtc && agenda.dayOne.endUtc ? (
-                    <LocalizedTimeRange
-                      startUtc={agenda.dayOne.startUtc}
-                      endUtc={agenda.dayOne.endUtc}
-                      fallback={agenda.dayOne.time}
-                    />
-                  ) : (
-                    agenda.dayOne.time
-                  )}
+                  {agenda.dayOne.time}
                 </p>
               </div>
             </div>
@@ -150,15 +125,7 @@ export function TwoDayAgenda({ agenda, eventDates }: TwoDayAgendaProps) {
                 <h3 className="text-2xl font-bold text-gray-900">Day 2</h3>
                 <p className="text-gray-600">
                   {agenda.dayTwo.date} •{' '}
-                  {agenda.dayTwo.startUtc && agenda.dayTwo.endUtc ? (
-                    <LocalizedTimeRange
-                      startUtc={agenda.dayTwo.startUtc}
-                      endUtc={agenda.dayTwo.endUtc}
-                      fallback={agenda.dayTwo.time}
-                    />
-                  ) : (
-                    agenda.dayTwo.time
-                  )}
+                  {agenda.dayTwo.time}
                 </p>
               </div>
             </div>

@@ -35,9 +35,6 @@ const coursesCollection = defineCollection({
         earlyBirdPrice: z.string(),
         regularPrice: z.string(),
         time: z.string(),
-        startUtc: z.string().optional(),
-        endUtc: z.string().optional(),
-        timeSuffix: z.string().optional(),
         featured: z.boolean().optional(),
         features: z.array(z.object({
           text: z.string(),
@@ -57,16 +54,9 @@ const coursesCollection = defineCollection({
     
     // Two Day Agenda
     agenda: z.object({
-      summary: z.object({
-        startUtc: z.string(),
-        endUtc: z.string(),
-        labelSuffix: z.string().optional(),
-      }).optional(),
       dayOne: z.object({
         date: z.string(),
         time: z.string(),
-        startUtc: z.string().optional(),
-        endUtc: z.string().optional(),
         topics: z.array(z.object({
           title: z.string(),
           description: z.string(),
@@ -76,8 +66,6 @@ const coursesCollection = defineCollection({
       dayTwo: z.object({
         date: z.string(),
         time: z.string(),
-        startUtc: z.string().optional(),
-        endUtc: z.string().optional(),
         topics: z.array(z.object({
           title: z.string(),
           description: z.string(),

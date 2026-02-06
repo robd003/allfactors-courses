@@ -105,14 +105,14 @@ export function Footer() {
         <div className="text-center text-gray-500 text-sm">
           Copyright © 2025 AllFactors, Inc. |{' '}
           <a 
-            href="#" 
+            href="https://allfactors.com/privacy-policy/" 
             className="text-gray-700 hover:text-black transition-colors"
           >
             Privacy Policy
           </a>
           {' & '}
           <a 
-            href="#" 
+            href="https://allfactors.com/terms-of-service/" 
             className="text-gray-700 hover:text-black transition-colors"
           >
             Terms of Use

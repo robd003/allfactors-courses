@@ -6,12 +6,14 @@ import path from 'path';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 
+import cloudflare from '@astrojs/cloudflare';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://astro.build/config
 export default defineConfig({
   integrations: [react()],
-  
+
   image: {
     service: {
       entrypoint: 'astro/assets/services/noop'
@@ -28,5 +30,7 @@ export default defineConfig({
         '@styles': path.resolve(__dirname, './src/styles'),
       }
     }
-  }
+  },
+
+  adapter: cloudflare()
 });

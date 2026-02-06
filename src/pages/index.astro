@@ -1,23 +1,43 @@
 ---
 import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { HeroSection } from '../components/HeroSection';
+import { SoundsFamiliar } from '../components/SoundsFamiliar';
+import { WhatYouMaster } from '../components/WhatYouMaster';
+import { WhoThisIsFor } from '../components/WhoThisIsFor';
+import { TwoDayAgenda } from '../components/TwoDayAgenda';
+import { Instructor } from '../components/Instructor';
+import { Skills } from '../components/Skills';
+import { Pricing } from '../components/Pricing';
+import { WhatsIncluded } from '../components/WhatsIncluded';
+import { FAQ } from '../components/FAQ';
+import { Footer } from '../components/Footer';
 
-// Redirect to the paid ads masterclass (or first course)
 const courses = await getCollection('courses');
-const firstCourse = courses.find(c => c.data.slug === 'paid-ads-masterclass') || courses[0];
+const defaultCourse = courses.find((course) => course.data.slug === 'paid-ads-masterclass') || courses[0];
 
-if (firstCourse) {
-  return Astro.redirect(`/courses/${firstCourse.data.slug}`);
+if (!defaultCourse) {
+  throw new Error('No courses found. Add a course JSON file in src/content/courses/.');
 }
+
+const { data } = defaultCourse;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Loading...</title>
-  </head>
-  <body>
-    <p>Loading...</p>
-  </body>
-</html>
+<Layout
+  title={data.seo?.metaTitle || data.title}
+  description={data.seo?.metaDescription || data.subtitle}
+>
+  <div class="min-h-screen bg-white">
+    <HeroSection hero={data.hero} eventDates={data.eventDates} client:load />
+    <SoundsFamiliar />
+    <WhatYouMaster />
+    <WhoThisIsFor />
+    <TwoDayAgenda />
+    <Instructor />
+    <Skills />
+    <Pricing client:load />
+    <WhatsIncluded />
+    <FAQ client:load />
+    <Footer />
+  </div>
+</Layout>
